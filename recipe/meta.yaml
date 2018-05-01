@@ -1,4 +1,4 @@
-{% set version = '0.8-69' %}
+{% set version = '0.8-70' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,24 +12,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/foreign_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/foreign/foreign_{{ version }}.tar.gz
-  sha256: 13689f5ec1ab09e8973be81c7f1799b7de4313176072887a9fa0b5825aed3468
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 86cd8645f15fca4e2854a1011469114bb93d3774a18cb6db4805873830a2b886
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
@@ -74,8 +67,8 @@ extra:
 
 # Package: foreign
 # Priority: recommended
-# Version: 0.8-69
-# Date: 2017-06-21
+# Version: 0.8-70
+# Date: 2017-11-28
 # Title: Read Data Stored by 'Minitab', 'S', 'SAS', 'SPSS', 'Stata', 'Systat', 'Weka', 'dBase', ...
 # Depends: R (>= 3.0.0)
 # Imports: methods, utils, stats
@@ -87,11 +80,11 @@ extra:
 # License: GPL (>= 2)
 # BugReports: https://bugs.r-project.org
 # NeedsCompilation: yes
-# Packaged: 2017-06-21 15:59:59 UTC; ligges
+# Packaged: 2017-11-28 12:58:54 UTC; ripley
 # Author: R Core Team [aut, cph, cre], Roger Bivand [ctb, cph], Vincent J. Carey [ctb, cph], Saikat DebRoy [ctb, cph], Stephen Eglen [ctb, cph], Rajarshi Guha [ctb, cph], Swetlana Herbrandt [ctb], Nicholas Lewin-Koh [ctb, cph], Mark Myatt [ctb, cph], Ben Pfaff [ctb], Brian Quistorff [ctb], Frank Warmerdam [ctb, cph], Stephen Weigand [ctb, cph], Free Software Foundation, Inc. [cph]
 # Maintainer: R Core Team <R-core@R-project.org>
 # Repository: CRAN
-# Date/Publication: 2017-06-21 18:03:34 UTC
+# Date/Publication: 2018-04-23 08:51:05 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
